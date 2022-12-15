@@ -20,8 +20,8 @@ namespace FightParkinsonsApp
             broker.SaveChanges();
 
             // modify record
-            student.Id = 1;
             student.Name = "Michael Fox";
+            broker.Update(student);
             broker.SaveChanges();
 
             // retrieve historical data
