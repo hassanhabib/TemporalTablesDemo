@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightParkinsonsApp", "FightParkinsonsApp\FightParkinsonsApp.csproj", "{5FFEE943-0615-41BB-9CE4-75A86E56F806}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FFEE943-0615-41BB-9CE4-75A86E56F806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFEE943-0615-41BB-9CE4-75A86E56F806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFEE943-0615-41BB-9CE4-75A86E56F806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFEE943-0615-41BB-9CE4-75A86E56F806}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B6A3F58-CA56-431D-BE2B-AD23420B78FE}
+	EndGlobalSection
+EndGlobal
