@@ -8,20 +8,28 @@ namespace FightParkinsonsApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
+            // new record
             var student = new Student
             {
-                Id = 1,
                 Name = "Michael J. Fox (New)"
             };
 
+            // add record
             var broker = new StorageBroker();
+            broker.Add(student);
+            broker.SaveChanges();
 
+            // modify record
+            student.Id = 1;
+            student.Name = "Michael Fox";
+            broker.SaveChanges();
+
+            // retrieve historical data
             IQueryable<Student> students = 
                 broker.Students.TemporalAll();
 
-            Console.Write(student);
+
+            Console.Write("Don't forget to donate to Michael J. Fox Foundation!");
         }
     }
 
@@ -42,12 +50,7 @@ namespace FightParkinsonsApp
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Student>()
-                .ToTable(
-                    name: "Students",
-                    studentsTable => studentsTable.IsTemporal(s =>
-                    {
-                        s.HasPeriodEnd("Start")
-                    }));
+                .ToTable(name: "Students", studentsTable => studentsTable.IsTemporal());
         }
 
         public DbSet<Student> Students { get; set; }
